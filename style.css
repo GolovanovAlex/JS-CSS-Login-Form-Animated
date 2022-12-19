@@ -22,3 +22,39 @@ section {
   width: 100vw;
   height: 100vh;
 }
+section .singin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 400px;
+  padding: 40px;
+  background-color: #222;
+  border-radius: 4px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+section .singin .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  position: relative;
+  width: 100%;
+}
+.content h2 {
+  font-size: 2em;
+  text-transform: uppercase;
+  color: #0f0;
+}
+.content .form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+}
+.content .form .inputBox {
+  position: relative;
+  width: 100%;
+}
