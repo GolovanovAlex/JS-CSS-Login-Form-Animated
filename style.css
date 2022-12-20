@@ -58,3 +58,32 @@ section .singin .content {
   position: relative;
   width: 100%;
 }
+
+.content .form .inputBox input {
+  position: relative;
+  width: 100%;
+  padding: 25px 10px 7.5px;
+  background-color: #333;
+  border-radius: 4px;
+  font-size: 1em;
+  font-weight: 500;
+  color: #fff;
+  border: none;
+  outline: none;
+}
+.content .form .inputBox i {
+  position: absolute;
+  left: 0;
+  padding: 15px 10px;
+  font-style: normal;
+  color: #aaa;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.content .form .inputBox input:focus ~ i,
+.content .form .inputBox input:valid ~ i {
+  transform: translateY(-9px);
+  font-size: 0.8em;
+  color: #fff;
+}
