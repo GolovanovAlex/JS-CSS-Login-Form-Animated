@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap');
 * {
   padding: 0;
   margin: 0;
@@ -18,9 +18,41 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   position: absolute;
   width: 100vw;
   height: 100vh;
+  gap: 2px;
+  overflow: hidden;
+}
+section::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#000, #0f0, #000);
+  animation: animebg 5s linear infinite;
+}
+@keyframes animebg {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+section span {
+  display: block;
+  position: relative;
+  width: calc(6.25vw - 2px);
+  height: calc(6.25vw - 2px);
+  background-color: #181818;
+  transition: 1.1s;
+  z-index: 2;
+}
+section span:hover {
+  background-color: #0f0;
+  transition: 0s;
 }
 section .singin {
   display: flex;
@@ -86,4 +118,56 @@ section .singin .content {
   transform: translateY(-9px);
   font-size: 0.8em;
   color: #fff;
+}
+.content .form .links {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+}
+.links a {
+  color: #fff;
+  text-decoration: none;
+}
+.links a:nth-child(2) {
+  color: #0f0;
+  font-weight: 600;
+}
+.content .form .inputBox input[type='submit'] {
+  font-size: 1.25em;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 10px;
+  background-color: #0f0;
+  color: #111;
+  cursor: pointer;
+}
+section span {
+  display: block;
+  position: relative;
+  width: calc(6.25vw - 2px);
+}
+@media (max-width: 1300px) {
+  section {
+  }
+  section span {
+    width: calc(10vw - 2px);
+    height: calc(10vw - 2px);
+  }
+}
+@media (max-width: 800px) {
+  section {
+  }
+  section span {
+    width: calc(14.2vw - 2px);
+    height: calc(14.2vw - 2px);
+  }
+}
+@media (max-width: 500px) {
+  section {
+  }
+  section span {
+    width: calc(20vw - 2px);
+    height: calc(20vw - 2px);
+  }
 }
